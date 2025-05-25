@@ -1,0 +1,189 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap/scss/bootstrap";
+
+// Variables
+$primary: #bb5d3c;
+$secondary: #222;
+$font: 14px/14px "Poppins", sans-serif;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Custom Styles
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: $dark;
+  color: $light;
+  padding: 1rem;
+
+  .nav-link {
+    color: $light;
+    padding: 0.8rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0.2rem 0;
+
+    &:hover,
+    &.active {
+      background: rgba($primary, 0.2);
+      color: $primary;
+    }
+  }
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: $light;
+}
+
+// Dashboard Cards
+.dashboard-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $primary;
+  }
+
+  .card-label {
+    color: $secondary;
+    font-size: 1rem;
+  }
+}
+
+// Forms
+.admin-form {
+  .form-control {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba($secondary, 0.2);
+
+    &:focus {
+      border-color: $primary;
+      box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+    }
+  }
+
+  .btn-primary {
+    background: $primary;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background: darken($primary, 10%);
+    }
+  }
+}
+
+// Tables
+.admin-table {
+  th {
+    background: $light;
+    color: $secondary;
+    font-weight: 600;
+  }
+
+  td {
+    vertical-align: middle;
+  }
+
+  .action-buttons {
+    .btn {
+      padding: 0.4rem 0.8rem;
+      margin: 0 0.2rem;
+    }
+  }
+}
+
+// Login Page
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $primary 0%, darken($primary, 20%) 100%);
+
+  .login-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+// Charts
+.chart-container {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+}
+
+// Events Section
+.event-card {
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+  .event-image {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .event-details {
+    padding: 1.5rem;
+  }
+
+  .event-date {
+    color: $primary;
+    font-weight: 600;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+// Hover Effects
+.hover-effect {
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+}
